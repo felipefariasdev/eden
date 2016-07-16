@@ -1,0 +1,16 @@
+﻿<ion-view view-title="Detalhe" ng-init="getEventosId()">
+    <ion-content class="im-wrapper">
+        <ion-item>
+            <div class="itemEventos">
+                <h1 ng-bind-html="data.title.rendered | limitTo: 64"></h1>
+				
+				<a href="javascript:void(0)" class="button icon-left button-balanced">
+                        Adicionar na agenda
+                </a>
+				
+				
+                <div ng-bind-html="data.content.rendered"></div>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

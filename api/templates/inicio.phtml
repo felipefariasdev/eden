@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>ÉDEN API</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.teal-red.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">ÉDEN API</span>
+        </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+			<div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+				 
+				 <div style="float: right;
+    display: block;"><a href="https://www.mindmeister.com/pt/711310006/eventos-art" target="_blank"><span><img src="img/visao_projeto.png"><span></a>
+				 </div><br /><br /><br /><br /><br /><br />
+				 <hr>
+				 
+				
+				 <img src="img/admin_eventos.png">
+				 
+				 <strong>Admin</strong> <a href="http://admin-eden.cursophprj.com.br/wp-admin/" target="_blank">http://admin-eden.cursophprj.com.br/wp-admin/</a> (login:admin e senha: senha123)<br /><br />
+				 
+				 <strong> - O evento é cadastrado pelo parte administrativa do WordPress</strong> <br /><br />
+				
+				 <strong>Site:</strong> <a href="http://admin-eden.cursophprj.com.br" target="_blank">http://admin-eden.cursophprj.com.br/ </a><br /><br />
+<hr>				
+				<strong style="color: #719e40;">Listar todos Eventos</strong>
+				 <strong>Rest method GET - </strong> <a href="http://admin-eden.cursophprj.com.br/wp-json/wp/v2/posts" target="_blank">http://admin-eden.cursophprj.com.br/wp-json/wp/v2/posts </a><br /><br />
+				 
+				 <strong style="color: #719e40;">Selecionar um evento</strong>
+				 <strong>Rest method GET - </strong> <a href="http://admin-eden.cursophprj.com.br/wp-json/wp/v2/posts/1" target="_blank">http://admin-eden.cursophprj.com.br/wp-json/wp/v2/posts/1 </a><br /><br />
+				<hr>
+				 <strong>APP ENTRADA no Evento:</strong> <a href="http://eden-app-entrada.cursophprj.com.br/" target="_blank">http://eden-app-entrada.cursophprj.com.br/ </a><br /><br />
+				 <strong>Descrição</strong> 
+				 <br /><br />
+				 1 - Selecione o evento que foi cadastrado pelo admin<br /><br />
+				 2 - Localizar o usuário pelo nome ou email<br /><br />
+				 3 - Se o usuário não é cadastrado na casa então o cadastro dele é realizado no momento da entrada já sendo vinculado ao evento atual<br /><br />
+				 4 - Se o usuário já é cadastrado na casa mas sua entrada não foi confirmada então basta confirmar sua entrada
+				 <br /><br />
+				
+				<hr>
+				
+				 <strong>APP Cliente:</strong> <a href="http://eden-app-cliente.cursophprj.com.br/" target="_blank">http://eden-app-cliente.cursophprj.com.br/ </a><br /><br />
+				 <strong>Descrição</strong> 
+				 <br /><br />
+				 1 - O usuário adiciona o evento de seu interesse em sua agenda<br /><br />
+				 2 - O usuário visualiza os eventos que estão em sua agenda<br /><br />
+				 <br /><br />
+				
+				<hr>
+				
+				<h5>APP (ENTRADA DO EVENTO)</h5>
+				<img src="img/entrada_evento.png">
+		
+				<p>
+					<strong style="color: #719e40;">Pesquisar todos usuários (por nome ou email) e verificar se ele está vinculado ao evento selecionado</strong><br />
+	
+					GET - http://eden-api.cursophprj.com.br/usuario_evento/list/evento_id/campo_de_pesquisado <br /><br />
+					
+					
+					Essa listagem vem todos usuários cadastrados na casa independente de estar ou não vinculado a um evento<br /><br />
+
+O campo <strong>vou</strong> indica se o usuário está vinculado ao evento, null significa que ele não marcou o evento em sua agenda (EU VOU)<br /><br />
+O campo <strong>entrou</strong> indica se o usuário realmente entrou no evento (0=não entrou, 1 = entrou), essa confirmação acontece com o aplicativo na entrada do evento. <br /><br />
+
+Exibir a imagem do documento:http://api-eden.cursophprj.com.br/img/documento_perfil/{{img_documento}}
+					
+				</p>
+				
+				<p>
+					<strong style="color: #719e40;">Novo usuário vinculado a um evento</strong><br />
+					POST - http://eden-api.cursophprj.com.br/usuario_evento/insert <br />	
+					{'nome':'leonardo:'email','leonardo@gmail.com','eventos_id':322,'img_documento':'documento.jpg'}
+				</p>
+				
+				<p>
+					<strong style="color: #719e40;">Confirmar entrada do usuário</strong><br />
+					POST - http://eden-api.cursophprj.com.br/usuario/confirmar_entrada <br /> 
+					{'usuarios_id',usuarios_id,'eventos_id':322}					
+				</p>
+				
+				<p>
+					<strong style="color: #719e40;">Login</strong><br />
+					POST - http://eden-api.cursophprj.com.br/login_entrada <br /> 
+					{'login':'entrada','senha':'entrada123'}
+				</p>
+				
+
+				<hr>
+				
+				<h5>APP (CLIENTE)</h5>
+				
+				<p>
+					<strong style="color: #719e40;">Novo usuário sem vinculo a um evento </strong><br><br>
+					POST - http://eden-api.cursophprj.com.br/usuario/insert <br />
+					{'nome':'leonardo:'email','leonardo@gmail.com','img_documento':'documento.jpg'}
+
+				</p>
+				
+				<p>
+					<strong style="color: #719e40;">Adicionar evento na agenda (EU VOU) </strong><br><br>
+					POST - http://eden-api.cursophprj.com.br/usuario/vincular_evento<br />
+					{'usuarios_id','identificação do usuário logado','eventos_id':322}
+				</p>
+				
+				
+				<p>
+					<strong style="color: #719e40;">Agenda de eventos (EU VOU) </strong><br><br>
+					GET - http://eden-api.cursophprj.com.br/usuario/agenda/eventos/identificação do usuário logado (Não concluído!)
+				</p>
+				
+				<p>
+					<strong style="color: #719e40;">Login</strong><br><br>
+					POST - http://eden-api.cursophprj.com.br/login
+					{'email':'teste@gmail.com','senha':'123'}
+				</p>
+				
+			</div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li>DOCUMENTAÇÃO API ÉDEN</li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <a href="https://github.com/feliperodrigues007/eden" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" style="background-color: rgb(76, 188, 73)!important;">GITHUB</a>
+    <script src="js/material.min.js"></script>
+  </body>
+</html>

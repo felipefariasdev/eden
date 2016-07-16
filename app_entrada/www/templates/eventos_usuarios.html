@@ -1,0 +1,28 @@
+﻿<ion-view view-title="Evento e Usuários">
+    <ion-content class="im-wrapper">
+        <ion-item>
+            <h1 ng-bind-html="data.title.rendered | limitTo: 64"></h1>
+        </ion-item>
+        <ion-item>
+            <button class="button button-balanced ion-plus-circled" style="float: right;" ng-click="novoUsuario(Usuario,pesquisar);">
+                Usuário {{pesquisar}}
+            </button>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Pesquisar Usuários" ng-model="pesquisar" ng-keyup="getUsersFetchAll(pesquisar)">
+            </label>
+            <label ng-show="pesquisar"><strong>{{qtdUsersPesquisa}} usuários localizados</strong></label>
+            <ion-item ng-repeat="x in data_usuarios" class="item" ng-show="pesquisar">
+                <a href="" ng-hide="x.entrou" ng-click="confirmarEntrada(x,pesquisar)">
+					<span style="font-size: xx-large;" class="ion-arrow-right-c"></span>
+				</a>
+                <i class="icon ion-person-stalker"></i>
+                    {{x.nome}}, {{x.email}}
+                <div ng-show="x.entrou" ng-click="entrou(x)">
+                    <span class="badge badge-balanced">(ENTROU)</span>
+                    <span class="badge badge-stable">(ENTROU)</span>
+                </div>
+            </ion-item>
+        </ion-item>
+    </ion-content>
+</ion-view>

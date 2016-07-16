@@ -1,0 +1,10 @@
+﻿<ion-view view-title="Detalhe" ng-init="getEventosId()">
+    <ion-content class="im-wrapper">
+        <ion-item>
+            <div class="itemEventos">
+                <h1 ng-bind-html="data.title.rendered | limitTo: 64"></h1>
+                <div ng-bind-html="data.content.rendered"></div>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+﻿<ion-view view-title="Eventos" ng-init="getEventosAll()">
+    <ion-content class="im-wrapper">
+        <div class="list list-inset">
+            <ion-item ng-repeat="x in data" class="item">
+                <a href="#/app/eventos/{{x.id}}">
+				<span ng-bind-html="x.title.rendered | limitTo: 70"></span>
+				</a>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

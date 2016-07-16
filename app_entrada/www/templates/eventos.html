@@ -1,0 +1,17 @@
+﻿<ion-view view-title="Eventos" ng-init="getEventosAll()">
+    <ion-content class="im-wrapper">
+        <div class="list list-inset">
+            <ion-item ng-repeat="x in data" class="item">
+                <h1 ng-bind-html="x.title.rendered | limitTo: 70"></h1>
+                <div>
+                    <a href="#/app/eventos/{{x.id}}" class="button button-light">
+                        Detalhes
+                    </a>
+                    <a href="#/app/eventos_usuarios/{{x.id}}" class="button icon-left button-balanced">
+                        Entrada
+                    </a>
+                </div>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
